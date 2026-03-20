@@ -4,10 +4,12 @@
 }
 
 .maxWidthWrapper {
+  position: relative;
 }
 
 .header {
   padding-bottom: 64px;
+  max-width: 65%;
 }
 
 .title {
@@ -24,7 +26,46 @@
 }
 
 .characterWrapper {
+  min-height: 500px;
+  position: fixed;
+  width: calc(100% - 65%);
+  top: 50px;
+  right: 40px;
 }
 
 .controlColumn {
+  max-width: 50%;
+}
+
+.perspective {
+  position: fixed;
+  bottom: 0;
+  background-color: hsl(195deg, 20%, 86%);
+  width: 100%;
+  height: 40%;
+}
+
+@media (width <= 480px) {
+  .maxWidthWrapper {
+    position: fixed;
+    bottom: 40px;
+    width: 100%;
+
+    .controlColumn {
+      display: flex;
+      max-width: none;
+      overflow-x: auto;
+      gap: 32px;
+    }
+
+    .header {
+      display: none;
+    }
+  }
+
+  .characterWrapper {
+    position: relative;
+    left: 20px;
+    width: 100%;
+  }
 }

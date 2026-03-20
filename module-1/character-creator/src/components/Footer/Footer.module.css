@@ -4,5 +4,14 @@
   background: hsl(0deg, 0%, 5%);
   color: white;
   text-align: center;
-}
 
+  a {
+    color: white;
+  }
+
+  @media (width <= 480px) {
+    & {
+      display: none;
+    }
+  }
+}
