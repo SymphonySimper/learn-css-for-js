@@ -56,11 +56,24 @@ const Content = styled.div`
   background: white;
   border-radius: 8px;
   width: 65%;
+
+  @media (max-width: 420px) {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
 `;
 
 const Header = styled.header`
   padding: 16px;
   padding-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: 420px) {
+    border-bottom: 1px solid black;
+  }
 `;
 
 const CloseButton = styled.button`
@@ -73,6 +86,11 @@ const CloseButton = styled.button`
   height: 48px;
   cursor: pointer;
   color: white;
+
+  @media (max-width: 420px) {
+    position: static;
+    color: black;
+  }
 `;
 
 const Title = styled.h2`
