@@ -8,7 +8,7 @@ const PhotoGridItem = ({ id, src, sourcesAvif, sourcesJpg,  alt, tags }) => {
         <picture>
           <source type="image/avif" srcSet={sourcesAvif.join(', ')} />
           <source type="image/jpg" srcSet={sourcesJpg.join(', ')} />
-          <Image src={src} />
+          <Image src={src} alt={alt} />
         </picture>{" "}
       </Anchor>
       <Tags>
